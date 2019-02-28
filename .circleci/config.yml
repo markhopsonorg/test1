@@ -1,0 +1,45 @@
+version: 2
+defaults: &defaults
+  working_directory: ~/app
+  docker:
+    - image: 421990735784.dkr.ecr.us-east-1.amazonaws.com/ci-build-environment:node-8
+    
+jobs:
+
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+
+  one-for-all:
+    <<: *defaults
+    steps:
+      - run:
+          name: one-for-all
+          command: echo "Skipping one-for-all ..."
+
+  deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          command: ls && cd ~/app
+      - run:
+          command: chmod +x ./deploy/production.sh
+      - run:
+          command: ./deploy/production.sh
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - one-for-all:
+          requires:
+            - build
+      - deploy:
+          filters:
+            branches:
+              only: MIC-1282 
+          requires:
+            - build
