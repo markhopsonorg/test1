@@ -9,7 +9,7 @@ This repo was seeded by the Flipp MS Platform with the following files:
 ├── .circleci
 |   └── config.yml
 ├── functions
-|   └── {{FUNCTION_NAME}}
+|   └── test1
 |   |   └── index.js
 |   |   └── function.json
 |   |   └── package.json
@@ -29,13 +29,13 @@ Flipp uses the [Apex](http://apex.run/) directory structure so each Serverless F
 
 The child directory names will be the name used for the Lambda if `"nameTemplate": "{{.Function.Name}}"` inside `project.json`.  Otherwise it will use Apex default naming.
 
-## functions/{{FUNCTION_NAME}}
+## functions/test1
 
 Everything in this folder will be packaged and uploaded to the Lambda.
 
 You can have multiple Functions per Repo but this is not offically supported by the MS Platform yet.  You will need custom work to support this.
 
-## functions/{{FUNCTION_NAME}}/project.json
+## functions/test1/project.json
 
 This configuration file is taken directly from [Apex](http://apex.run/).
 
@@ -49,7 +49,7 @@ This file can contain the following settings.  These values can be overriden per
 * handler
 * nameTemplate 
 
-## functions/{{FUNCTION_NAME}}/function.json
+## functions/test1/function.json
 
 Also taken from [Apex](http://apex.run/).  This file must contain (atleast) the following params (it can also include params from project.json it wants to override).
 
@@ -70,7 +70,7 @@ exports.handle(sampleEvent, sampleContext, (err) => {
 ```
 
 ```
-cd functions/{{FUNCTION_NAME}}
+cd functions/test1
 npm install
 node index.js
 ```

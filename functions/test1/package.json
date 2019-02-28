@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wishabi/{{FUNCTION_NAME}}.git"
+    "url": "git+https://github.com/wishabi/test1.git"
   },
   "author": "Flipp Corp.",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wishabi/{{FUNCTION_NAME}}/issues"
+    "url": "https://github.com/wishabi/test1/issues"
   },
-  "homepage": "https://github.com/wishabi/{{FUNCTION_NAME}}#readme",
+  "homepage": "https://github.com/wishabi/test1#readme",
   "dependencies": {
     "@flipp/node-logger": "^1.4.3",
     "@flipp/ssm-utils": "^1.0.1"

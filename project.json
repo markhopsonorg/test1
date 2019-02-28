@@ -1,6 +1,6 @@
 {
   "name": "test1 Project",
-  "description": "{{FUNCTION_NAME}} Project",
+  "description": "test1 Project",
   "nameTemplate": "{{.Function.Name}}",
   "hooks": {
     "build": "npm install"

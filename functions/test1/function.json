@@ -1,6 +1,6 @@
 {
   "description": "test1 Lambda",
-  "role": "arn:aws:iam::421990735784:role/{{FUNCTION_NAME}}-role",
+  "role": "arn:aws:iam::421990735784:role/test1-role",
   "memory": 128,
   "runtime": "nodejs8.10",
   "timeout": 30,
